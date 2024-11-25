@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 
 public class Product {
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private int productId;
     private String productName;
     private int productPrice;

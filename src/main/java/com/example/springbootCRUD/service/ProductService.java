@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -27,8 +27,8 @@ public class ProductService {
     }
 
 
-    public Product getProductById(int productId) {
-        return productRepo.findById(productId).orElse(new Product(-1,"NO product", 0));
+    public Optional<Product> getProductById(int productId) {
+        return productRepo.findById(productId);
 //        return products.stream().filter(product -> product.getProductId() == productId).findFirst().orElse(new Product(-1,"no product",0));
     }
 
@@ -73,4 +73,11 @@ public class ProductService {
 //
 //        return products.remove(index);
     }
+
+
+    public Optional<Product> getProductByName(String pName) {
+         return productRepo.findByProductName(pName);
+    }
+
+
 }

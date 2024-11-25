@@ -9,8 +9,10 @@ import org.springframework.context.ApplicationContext;
 public class SpringbootCrudApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(SpringbootCrudApplication.class, args);
+		 SpringApplication.run(SpringbootCrudApplication.class, args);
 
 	}
 
 }
+
+
